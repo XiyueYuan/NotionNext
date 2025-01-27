@@ -55,11 +55,8 @@ const BLOG = {
     'images.unsplash.com', // 触发替换图片的 url 关键字(多个支持用英文逗号分开)，只有图片地址中包含此关键字才会替换为上方随机图片url
   // eg: images.unsplash.com(notion图床的所有图片都会替换),如果你在 notion 里已经添加了一个随机图片 url，恰巧那个服务跑路或者挂掉，想一键切换所有配图可以将该 url 配置在这里
   // 默认下会将你上传到 notion的主页封面图和头像也给替换，建议将主页封面图和头像放在其他图床，在 notion 里配置 link 即可。
-
-  // START ************网站字体*****************
-  // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
-  // 后面空格隔开的font-light的字体粗细，留空是默认粗细；参考 https://www.tailwindcss.cn/docs/font-weight
-  FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || '"Times New Roman"',
+// START ************网站字体*****************
+    FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || '"Times New Roman"',
   // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
   FONT_URL: [
     // 'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
@@ -70,6 +67,7 @@ const BLOG = {
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
     // '"LXGW WenKai"',
+    '"Times New Roman"', // 将 Times New Roman 作为无衬线字体首选
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -90,10 +88,10 @@ const BLOG = {
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
     // '"LXGW WenKai"',
+    '"Times New Roman"', // 将 Times New Roman 作为衬线字体首选
     'Bitter',
     '"Noto Serif SC"',
     'SimSun',
-    '"Times New Roman"',
     'Times',
     'serif',
     '"Segoe UI Emoji"',
@@ -105,6 +103,7 @@ const BLOG = {
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', // font-awesome 字体图标地址; 可选 /css/all.min.css ， https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
 
   // END ************网站字体*****************
+
 
   // 路径和组件映射，不同路径分别展示主题的什么组件
   LAYOUT_MAPPINGS: {
