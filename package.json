@@ -20,6 +20,7 @@
     "export": "cross-env EXPORT=true next build && next-sitemap --config next-sitemap.config.js",
     "bundle-report": "cross-env ANALYZE=true next build",
     "build-all-in-dev": "cross-env VERCEL_ENV=production next build"
+    "preinstall": "npm config set registry https://registry.npmjs.org/"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
